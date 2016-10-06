@@ -10,10 +10,4 @@ class Product {
     public static function get($key) {
         return isset(self::$data[$key]) ? self::$data[$key] : null;
     }
-
-//    final public static function removeProduct($key) {
-//        if (isset(self::$data[$key])) {
-//            unset(self::$data[$key]);
-//        }
-//    }
 }
