@@ -7,5 +7,18 @@
             "email": "popcornphp@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "AbstractFactory\\": "src/AbstractFactory/",
+            "Builder\\": "src/Builder/",
+            "FactoryMethod\\": "src/FactoryMethod/",
+            "LazyInitialization\\": "src/LazyInitialization/",
+            "Multiton\\": "src/Multiton/",
+            "ObjectPool\\": "src/ObjectPool/",
+            "Prototype\\": "src/Prototype/",
+            "Registry\\": "src/Registry/",
+            "Singleton\\": "src/Singleton/"
+        }
+    }
 }
