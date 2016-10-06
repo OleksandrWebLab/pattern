@@ -1,0 +1,11 @@
+{
+    "name": "popcornphp/pattern",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Shapoval",
+            "email": "popcornphp@gmail.com"
+        }
+    ],
+    "require": {}
+}
