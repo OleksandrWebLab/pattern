@@ -1,5 +1,6 @@
 <?php namespace PopcornPHP\Pattern\FactoryMethod;
 
-interface InterfaceFactory {
+interface InterfaceFactory
+{
     public function getProduct();
 }

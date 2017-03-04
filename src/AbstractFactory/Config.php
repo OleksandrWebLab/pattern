@@ -1,5 +1,6 @@
 <?php namespace PopcornPHP\Pattern\AbstractFactory;
 
-class Config {
+class Config
+{
     public static $factory = 1;
 }

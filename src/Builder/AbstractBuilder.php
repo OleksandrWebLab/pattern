@@ -1,13 +1,16 @@
 <?php namespace PopcornPHP\Pattern\Builder;
 
-abstract class AbstractBuilder {
+abstract class AbstractBuilder
+{
     protected $product;
 
-    final public function getProduct() {
+    final public function getProduct()
+    {
         return $this->product;
     }
 
-    public function buildProduct() {
+    public function buildProduct()
+    {
         $this->product = new Product();
     }
 }

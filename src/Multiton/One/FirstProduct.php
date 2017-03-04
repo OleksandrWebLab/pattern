@@ -1,5 +1,6 @@
 <?php namespace PopcornPHP\Pattern\Multiton\One;
 
-class FirstProduct extends AbstractFactory {
+class FirstProduct extends AbstractFactory
+{
     public $a = [];
 }

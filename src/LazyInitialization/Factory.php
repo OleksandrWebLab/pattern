@@ -1,10 +1,12 @@
 <?php namespace PopcornPHP\Pattern\LazyInitialization;
 
-class Factory {
+class Factory
+{
     protected $firstProduct;
     protected $secondProduct;
 
-    public function getFirstProduct() {
+    public function getFirstProduct()
+    {
         if (!$this->firstProduct) {
             $this->firstProduct = new FirstProduct();
         }
@@ -12,7 +14,8 @@ class Factory {
         return $this->firstProduct;
     }
 
-    public function getSecondProduct() {
+    public function getSecondProduct()
+    {
         if (!$this->secondProduct) {
             $this->secondProduct = new SecondProduct();
         }

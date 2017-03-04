@@ -1,5 +1,6 @@
 <?php namespace PopcornPHP\Pattern\AbstractFactory;
 
-interface InterfaceProduct {
+interface InterfaceProduct
+{
     public function getName();
 }

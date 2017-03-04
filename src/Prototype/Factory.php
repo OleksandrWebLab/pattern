@@ -1,13 +1,16 @@
 <?php namespace PopcornPHP\Pattern\Prototype;
 
-class Factory {
+class Factory
+{
     private $product;
 
-    public function __construct(Product $product) {
+    public function __construct(Product $product)
+    {
         $this->product = $product;
     }
 
-    public function getProduct() {
+    public function getProduct()
+    {
         return clone $this->product;
     }
 }

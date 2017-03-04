@@ -1,8 +1,11 @@
 <?php namespace PopcornPHP\Pattern\Multiton\Two;
 
-abstract class AbstractRegistryFactory extends AbstractFactory {
-    final public static function getInstance($id) {
+abstract class AbstractRegistryFactory extends AbstractFactory
+{
+    final public static function getInstance($id)
+    {
         $className = static::getClassName();
+
         if (isset(self::$instances[$className])) {
             if (!isset(self::$instances[$className][$id])) {
                 self::$instances[$className][$id] = new $className($id);
@@ -16,8 +19,10 @@ abstract class AbstractRegistryFactory extends AbstractFactory {
         return self::$instances[$className][$id];
     }
 
-    final public static function removeInstance($id = null) {
+    final public static function removeInstance($id = null)
+    {
         $className = static::getClassName();
+
         if (isset(self::$instances[$className])) {
             if (is_null($id)) {
                 unset(self::$instances[$className]);
@@ -32,6 +37,7 @@ abstract class AbstractRegistryFactory extends AbstractFactory {
         }
     }
 
-    protected function __construct($id) {
+    protected function __construct($id)
+    {
     }
 }
