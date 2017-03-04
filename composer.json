@@ -1,5 +1,7 @@
 {
     "name": "popcornphp/pattern",
+    "description": "Library for teach PHP patterns",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -7,18 +9,18 @@
             "email": "popcornphp@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=7.0.0"
+    },
     "autoload": {
         "psr-4": {
-            "AbstractFactory\\": "src/AbstractFactory/",
-            "Builder\\": "src/Builder/",
-            "FactoryMethod\\": "src/FactoryMethod/",
-            "LazyInitialization\\": "src/LazyInitialization/",
-            "Multiton\\": "src/Multiton/",
-            "ObjectPool\\": "src/ObjectPool/",
-            "Prototype\\": "src/Prototype/",
-            "Registry\\": "src/Registry/",
-            "Singleton\\": "src/Singleton/"
+            "PopcornPHP\\Pattern\\": "src"
         }
-    }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev"
 }
