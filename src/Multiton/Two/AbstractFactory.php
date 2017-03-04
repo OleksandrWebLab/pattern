@@ -4,7 +4,7 @@ abstract class AbstractFactory
 {
     protected static $instances = [];
 
-    public static function getInstance()
+    public static function getInstance($id)
     {
         $className = static::getClassName();
 

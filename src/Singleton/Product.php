@@ -2,16 +2,31 @@
 
 final class Product
 {
-    public $var;
+    public $a;
 
     private static $instance;
 
     public static function getInstance()
     {
-        if (!isset(self::$instance)) {
+        if (!(self::$instance instanceof self)) {
             self::$instance = new self();
         }
-
         return self::$instance;
+    }
+
+    private function __construct()
+    {
+    }
+
+    private function __clone()
+    {
+    }
+
+    private function __sleep()
+    {
+    }
+
+    private function __wakeup()
+    {
     }
 }
