@@ -1,10 +1,17 @@
+### Install
+
+    composer require popcornphp/pattern
+
+
+## Patterns
+
 ### Registry
 
     use PopcornPHP\Pattern\Registry\Product;
 
     Product::set('name', 'First product');
     
-    echo var_dump(Product::get('name'));
+    var_dump(Product::get('name'));
 
 ### Object Pool
 
@@ -14,8 +21,8 @@
     Factory::pushProduct(new Product('first'));
     Factory::pushProduct(new Product('second'));
 
-    echo var_dump(Factory::getProduct('first')->getId());
-    echo var_dump(Factory::getProduct('second')->getId());
+    var_dump(Factory::getProduct('first')->getId());
+    var_dump(Factory::getProduct('second')->getId());
     
 ### Singleton
 
@@ -27,8 +34,8 @@
     $firstProduct->a = 1;
     $secondProduct->a = 2;
     
-    echo var_dump($firstProduct->a);
-    echo var_dump($secondProduct->a);
+    var_dump($firstProduct->a);
+    var_dump($secondProduct->a);
     
 ### Simple Multi-ton
 
@@ -41,8 +48,8 @@
     FirstProduct::getInstance()->a[] = 3;
     SecondProduct::getInstance()->a[] = 4;
     
-    echo var_dump(FirstProduct::getInstance()->a);
-    echo var_dump(SecondProduct::getInstance()->a);
+    var_dump(FirstProduct::getInstance()->a);
+    var_dump(SecondProduct::getInstance()->a);
     
 ### Complex Multi-ton
 
@@ -58,10 +65,10 @@
     SecondFactory::getInstance('FirstProduct')->a[] = 7;
     SecondFactory::getInstance('SecondProduct')->a[] = 8;
     
-    echo var_dump(FirstFactory::getInstance('FirstProduct')->a);
-    echo var_dump(FirstFactory::getInstance('SecondProduct')->a);
-    echo var_dump(SecondFactory::getInstance('FirstProduct')->a);
-    echo var_dump(SecondFactory::getInstance('SecondProduct')->a);
+    var_dump(FirstFactory::getInstance('FirstProduct')->a);
+    var_dump(FirstFactory::getInstance('SecondProduct')->a);
+    var_dump(SecondFactory::getInstance('FirstProduct')->a);
+    var_dump(SecondFactory::getInstance('SecondProduct')->a);
     
 ### Factory Method
 
@@ -74,8 +81,8 @@
     $factory = new SecondFactory();
     $secondProduct = $factory->getProduct();
     
-    echo var_dump($firstProduct->getName());
-    echo var_dump($secondProduct->getName());
+    var_dump($firstProduct->getName());
+    var_dump($secondProduct->getName());
     
 ### Abstract Factory
 
@@ -86,8 +93,8 @@
     Config::$factory = 2;
     $secondProduct = AbstractFactory::getFactory()->getProduct();
     
-    echo var_dump($firstProduct->getName());
-    echo var_dump($secondProduct->getName());
+    var_dump($firstProduct->getName());
+    var_dump($secondProduct->getName());
     
 ### Lazy Initialization
 
@@ -95,9 +102,9 @@
 
     $factory = new Factory();
     
-    echo var_dump($factory->getFirstProduct()->getName());
-    echo var_dump($factory->getSecondProduct()->getName());
-    echo var_dump($factory->getFirstProduct()->getName());
+    var_dump($factory->getFirstProduct()->getName());
+    var_dump($factory->getSecondProduct()->getName());
+    var_dump($factory->getFirstProduct()->getName());
     
 ### Prototype
 
@@ -112,8 +119,8 @@
     $secondProduct = $prototypeFactory->getProduct();
     $secondProduct->name = 'Second product';
     
-    echo var_dump($firstProduct->name);
-    echo var_dump($secondProduct->name);
+    var_dump($firstProduct->name);
+    var_dump($secondProduct->name);
     
 ### Builder
 
@@ -124,5 +131,5 @@
     $firstDirector = new Factory(new FirstBuilder());
     $secondDirector = new Factory(new SecondBuilder());
     
-    echo var_dump($firstDirector->getProduct()->getName());
-    echo var_dump($secondDirector->getProduct()->getName());
+    var_dump($firstDirector->getProduct()->getName());
+    var_dump($secondDirector->getProduct()->getName());
