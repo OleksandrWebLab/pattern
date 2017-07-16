@@ -13,20 +13,4 @@ final class Product
         }
         return self::$instance;
     }
-
-    private function __construct()
-    {
-    }
-
-    private function __clone()
-    {
-    }
-
-    private function __sleep()
-    {
-    }
-
-    private function __wakeup()
-    {
-    }
 }

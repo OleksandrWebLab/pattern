@@ -4,6 +4,6 @@ class SecondProduct implements InterfaceProduct
 {
     public function getName()
     {
-        return 'The product from second factory';
+        return 'The product from the second factory';
     }
 }
